@@ -14,11 +14,11 @@ jobs:
       #Skonfigurowanie dockera + buildx
       - name: Buildx set-up
         id: buildx
-        uses: docker/setup-buildx-action@latest
+        uses: docker/setup-buildx-action@master
         
       #Instalacja QEMU
       - name: Docker Setup QEMU
-        uses: docker/setup-qemu-action@latest
+        uses: docker/setup-qemu-action@master
 
       #Konfiguracja cachowania
       - name: Cache Docker layers
@@ -31,7 +31,7 @@ jobs:
 
       #Logowanie do Dockerhuba
       - name: Login to DockerHub
-        uses: docker/login-action@latest
+        uses: docker/login-action@master
         with:
           username: ${{secrets.DOCKER_HUB_USERNAME}}
           password: ${{secrets.DOCKER_HUB_ACCESS_TOKEN}}
