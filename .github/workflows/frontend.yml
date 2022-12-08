@@ -1,5 +1,3 @@
-# Szablondo lab7 - do uzupelnienia 
-
 name: CI
 on:
   push:
